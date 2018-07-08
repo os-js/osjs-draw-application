@@ -1,0 +1,19 @@
+{
+  "name": "Draw",
+  "category": "graphics",
+  "title": {
+    "en_EN": "Draw (dev)"
+  },
+  "description": {
+    "en_EN": "Draw"
+  },
+  "mimes": [
+    "image/jpeg",
+    "image/jpg",
+    "image/png"
+  ],
+  "files": [
+    "index.js",
+    "index.css"
+  ]
+}
