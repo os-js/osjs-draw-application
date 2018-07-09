@@ -13,7 +13,7 @@
     "osjs"
   ],
   "dependencies": {
-    "@osjs/common": "^3.0.0-alpha.13",
+    "@osjs/common": "^3.0.0-alpha.9",
     "@osjs/gui": "^3.0.0-alpha.20",
     "hyperapp": "^1.2.5"
   },

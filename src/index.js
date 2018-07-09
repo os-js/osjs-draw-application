@@ -154,7 +154,13 @@ const createApplication = (core, proc, win, $content) => {
         }))
       ]),
       h(Statusbar, {}, [
-        `${state.image.width}x${state.image.height} px - ${tools[state.tool.name].label} - F:${state.tool.foreground} B:${state.tool.background}`
+        [
+          `${state.image.width}x${state.image.height} px`,
+          tools[state.tool.name].label,
+          `F:${state.tool.foreground} B:${state.tool.background}`,
+          `S:${state.tool.stroke ? 'on' : 'off'}`,
+          `L:${state.tool.lineWidth}`
+        ].join(' - ')
       ])
     ]);
 

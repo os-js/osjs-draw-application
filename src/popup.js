@@ -34,27 +34,9 @@ import {
 } from 'hyperapp';
 
 import {
-  Box,
   BoxContainer,
-  Button,
   TextField
 } from '@osjs/gui';
-
-const createPopup = ([initialState, initialActions, children]) => ($root, cb) => app(
-  Object.assign({}, initialState),
-  Object.assign({
-    getState: () => state => state
-  }, initialActions),
-  (state, actions) => 
-    h(Box, {}, [
-      h(Box, {grow: 1, padding: false}, children(state, actions)),
-      h(BoxContainer, {justify: 'flex-end'}, [
-        h(Button, {onclick: () => cb(actions.getState())}, 'OK'),
-        h(Button, {onclick: () => cb(null)}, 'Cancel')
-      ])
-    ]),
-  $root
-);
 
 const createResizePopup = (image) => ([
   {
@@ -82,26 +64,42 @@ const popupTypes = {
 };
 
 export const popupFactory = (core, proc, win) => (name, actions, cb) => {
-  proc.createWindow({
-    title: name,
-    parent: win,
-    gravity: 'center',
-    dimension: {width: 300, height: 300},
-    attributes: {modal: true}
-  }).render(($content, popup) => {
-    const found = popupTypes[name];
-    if (found) {
-      const content = found(actions);
+  const found = popupTypes[name];
+  if (!found) {
+    return;
+  }
 
-      createPopup(content)($content, result => {
-        if (result !== null) {
-          cb(result);
-        }
-
-        popup.destroy();
-      });
-
-      popup.focus();
+  const dialog = core.make('osjs/dialogs').create({
+    className: name,
+    buttons: ['ok', 'cancel'],
+    window: {
+      title: name,
+      modal: true,
+      parent: win,
+      gravity: 'center',
+      dimension: {width: 300, height: 300},
+      attributes: {modal: true}
     }
+  }, () => {
+    return dialog.app.getState();
+  }, (btn, value) => {
+    if (btn === 'ok') {
+      cb(value);
+    }
+  });
+
+  dialog.render(($content, dwin) => {
+    const [initialState, initialActions, children] = found(actions);
+
+    dialog.app = app(
+      Object.assign({}, initialState),
+      Object.assign({getState: () => state => state}, initialActions),
+      (state, actions) => dialog.createView([
+        h(BoxContainer, {grow: 1, orientation: 'horizontal'}, children(state, actions))
+      ]),
+      $content
+    );
+
+    dwin.focus();
   });
 };
