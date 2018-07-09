@@ -28,16 +28,79 @@
  * @licence Simplified BSD License
  */
 
+const rgbToHex = (r, g, b) => '#' + [
+  parseInt(r, 10).toString(16),
+  parseInt(g, 10).toString(16),
+  parseInt(b, 10).toString(16)
+].map(val => String(val).padStart(2, '0')).join('');
+
 /*
  * The list of tools
  */
 export const tools = {
   pointer: {
-    label: 'Cursor'
+    label: 'Cursor',
+    icon: require('./icons/stock-cursor-16.png')
+  },
+
+  picker: {
+    label: 'Picker',
+    icon: require('./icons/stock-color-pick-from-screen-16.png'),
+
+    mousedown: ({a, ev, start, context, width, height}) => {
+      const px = parseInt(start.x, 10);
+      const py = parseInt(start.y, 10);
+      const data = context.getImageData(0, 0, width, height).data;
+      const index = (px + py * width) * 4;
+
+      const hex = rgbToHex(
+        data[index + 0],
+        data[index + 1],
+        data[index + 2],
+        data[index + 3]
+      );
+
+      if (ev.shiftKey || ev.button > 0) {
+        a.setBackground(hex);
+      } else {
+        a.setForeground(hex);
+      }
+    }
+  },
+
+  fill: {
+    label: 'Fill',
+    icon: require('./icons/stock-tool-bucket-fill-16.png'),
+
+    mousedown: ({ev, context, tool, width, height}) => {
+      const t = (ev.shiftKey || ev.button > 0) ? 'background' : 'foreground';
+      context.fillStyle = tool[t];
+      context.fillRect(0, 0, width, height);
+    }
+  },
+
+  path: {
+    label: 'Path',
+    icon: require('./icons/stock-tool-path-16.png'),
+
+    mousedown: ({tool, tempContext}) => {
+      // Flips the colors
+      tempContext.strokeStyle = tool.foreground;
+    },
+
+    mousemove: ({tempContext, start, current, width, height}) => {
+      tempContext.clearRect(0, 0, width, height);
+      tempContext.beginPath();
+      tempContext.moveTo(current.x, current.y);
+      tempContext.lineTo(start.x, start.y);
+      tempContext.closePath();
+      tempContext.stroke();
+    }
   },
 
   pencil: {
     label: 'Pencil',
+    icon: require('./icons/stock-tool-pencil-16.png'),
 
     mousedown: ({tool, tempContext}) => {
       // Flips the colors
@@ -55,6 +118,7 @@ export const tools = {
 
   rect: {
     label: 'Rectangle',
+    icon: require('./icons/stock-shape-rectangle-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
       tempContext.clearRect(0, 0, width, height);
@@ -67,6 +131,7 @@ export const tools = {
 
   square: {
     label: 'Square',
+    icon: require('./icons/stock-shape-square-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
       tempContext.clearRect(0, 0, width, height);
@@ -83,6 +148,7 @@ export const tools = {
 
   oval: {
     label: 'Oval',
+    icon: require('./icons/stock-shape-ellipse-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
       tempContext.clearRect(0, 0, width, height);
@@ -109,6 +175,7 @@ export const tools = {
 
   circle: {
     label: 'Circle',
+    icon: require('./icons/stock-shape-circle-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
       tempContext.clearRect(0, 0, width, height);

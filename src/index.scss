@@ -32,11 +32,17 @@
   background: url('./checkerboard.png');
   position: absolute;
   border: 1px dotted #0000ff;
+  box-sizing: border-box;
+  font-size: 0;
 }
 
 .Window_Draw .render-canvas {
-  position: relative;
-  z-index: 1;
+}
+
+.Window_Draw .draw-tools {
+  & > .osjs-gui-button > button {
+    text-align: left;
+  }
 }
 
 .Window_Draw .temp-canvas {

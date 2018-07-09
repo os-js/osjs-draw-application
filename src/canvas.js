@@ -62,7 +62,7 @@ export const createCanvasActions = ({
 
   const toolAction = (action, ev) =>
     (tools[currentTool.name][action] || function() {})({
-      ev, start, current, prev, diff,
+      a, ev, start, current, prev, diff,
       context, tempContext,
       width, height,
       tool: a.getTool()

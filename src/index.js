@@ -51,8 +51,9 @@ import {tools} from './tool.js';
 /*
  * Creates the toolbar buttons
  */
-const createToolButtons = (current, actions) => Object.keys(tools)
+const createToolButtons = (current, actions, proc) => Object.keys(tools)
   .map(name => h(Button, {
+    icon: proc.resource(tools[name].icon),
     label: tools[name].label,
     active: current && current.name === name,
     onclick: () => actions.buttonTool(name)
@@ -111,9 +112,10 @@ const createApplication = (core, proc, win, $content) => {
       ]),
       h(Box, {grow: 1, orientation: 'vertical'}, [
         h(Toolbar, {
+          class: 'draw-tools',
           orientation: 'horizontal'
         }, [
-          ...createToolButtons(state.tool, actions),
+          ...createToolButtons(state.tool, actions, proc),
           h(Button, {}, [
             h('div', {
               style: {height: '1em', backgroundColor: state.tool.foreground},
