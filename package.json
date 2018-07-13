@@ -13,8 +13,8 @@
     "osjs"
   ],
   "dependencies": {
-    "@osjs/common": "^3.0.0-alpha.9",
-    "@osjs/gui": "^3.0.0-alpha.20",
+    "@osjs/common": "^3.0.0-alpha.11",
+    "@osjs/gui": "^3.0.0-alpha.21",
     "hyperapp": "^1.2.5"
   },
   "author": "Anders Evenrud <andersevenrud@gmail.com>",
