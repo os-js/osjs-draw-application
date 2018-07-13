@@ -246,14 +246,14 @@ const createApplication = (core, proc, win, $content) => {
     save: () => state => {
       if (proc.args.file) {
         canvas.toBlob(blob => {
-          vfs.writefile(proc.args.file.path, blob)
+          vfs.writefile(proc.args.file, blob)
             .catch(error => console.error(error)); // FIXME: Dialog
         });
       }
     },
 
     load: item => (state, actions) => {
-      vfs.url(item.path)
+      vfs.url(item)
         .then(url => actions.loadImage(url))
         .catch(error => console.error(error)); // FIXME: Dialog
     },
