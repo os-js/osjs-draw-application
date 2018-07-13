@@ -275,6 +275,7 @@ const createApplication = (core, proc, win, $content) => {
   basic.on('save-file', a.save);
   basic.on('open-file', a.load);
   basic.init();
+  win.focus();
 };
 
 /*
