@@ -110,7 +110,7 @@ const createApplication = (core, proc, win, $content) => {
         h(MenubarItem, {onclick: ev => actions.menuFile(ev)}, 'File'),
         h(MenubarItem, {onclick: ev => actions.menuImage(ev)}, 'Image')
       ]),
-      h(Box, {grow: 1, orientation: 'vertical'}, [
+      h(Box, {grow: 1, shrink: 1, orientation: 'vertical'}, [
         h(Toolbar, {
           class: 'draw-tools',
           orientation: 'horizontal'
