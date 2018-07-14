@@ -1,6 +1,7 @@
 {
   "name": "Draw",
   "category": "graphics",
+  "icon": "icon.png",
   "title": {
     "en_EN": "Draw (dev)"
   },

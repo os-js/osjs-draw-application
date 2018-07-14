@@ -286,6 +286,7 @@ OSjs.make('osjs/packages').register('Draw', (core, args, options, metadata) => {
 
   proc.createWindow({
     title: metadata.title.en_EN,
+    icon: proc.resource(metadata.icon),
     dimension: {
       width: 500,
       height: 500
