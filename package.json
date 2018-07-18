@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "OS.js v3 Draw Application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/os-js/osjs-draw-application/issues"
   },
-  "homepage": "https://github.com/os-js/osjs-draw-application#readme"
+  "homepage": "https://github.com/os-js/osjs-draw-application#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0"
+  }
 }
