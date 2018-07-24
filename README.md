@@ -11,6 +11,12 @@
 
 # OS.js v3 Draw Application
 
-This is the Draw for OS.js v3
+This is the Draw Application for OS.js v3
 
-**PLEASE NOTE THAT THIS IS AN ALPHA PRE-RELEASE AND SUBJECT TO CHANGE WITHOUT NOTICE**
+## Installation
+
+```bash
+npm install --save @osjs/draw-application
+npm run package:discover
+npm run build:manifest
+```
