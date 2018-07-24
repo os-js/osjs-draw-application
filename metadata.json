@@ -14,7 +14,7 @@
     "image/png"
   ],
   "files": [
-    "index.js",
-    "index.css"
+    "main.js",
+    "main.css"
   ]
 }
