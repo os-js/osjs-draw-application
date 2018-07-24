@@ -18,5 +18,4 @@ This is the Draw Application for OS.js v3
 ```bash
 npm install --save @osjs/draw-application
 npm run package:discover
-npm run build:manifest
 ```
