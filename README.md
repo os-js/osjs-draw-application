@@ -13,6 +13,8 @@
 
 This is the Draw Application for OS.js v3
 
+![Screenshot](https://raw.githubusercontent.com/os-js/osjs-draw-application/master/screenshot.png)
+
 ## Installation
 
 ```bash
