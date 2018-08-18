@@ -49,5 +49,8 @@
     "stylelint-scss": "^3.1.3",
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0"
+  },
+  "osjs": {
+    "type": "package"
   }
 }
