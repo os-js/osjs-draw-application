@@ -3,10 +3,12 @@
   "category": "graphics",
   "icon": "icon.png",
   "title": {
-    "en_EN": "Draw"
+    "en_EN": "Draw",
+    "fr_FR": "Dessiner"
   },
   "description": {
-    "en_EN": "Draw"
+    "en_EN": "Draw",
+    "fr_FR": "Dessiner"
   },
   "mimes": [
     "image/jpeg",
