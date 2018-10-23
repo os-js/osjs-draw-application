@@ -4,10 +4,12 @@
   "icon": "icon.png",
   "title": {
     "en_EN": "Draw",
+    "nb_NO": "Tegne",
     "fr_FR": "Dessiner"
   },
   "description": {
     "en_EN": "Draw",
+    "nb_NO": "Tegne og bildemanipulasjon",
     "fr_FR": "Dessiner"
   },
   "mimes": [
