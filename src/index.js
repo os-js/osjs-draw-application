@@ -275,6 +275,14 @@ const createApplication = (core, proc, win, $content) => {
   basic.on('save-file', a.save);
   basic.on('open-file', a.load);
   basic.init();
+  win.on('drop', (ev, data) => {
+    if (data.isFile && data.mime) {
+      const found = proc.metadata.mimes.find(m => (new RegExp(m)).test(data.mime));
+      if (found) {
+        basic.open(data);
+      }
+    }
+  });
   win.focus();
 };
 
