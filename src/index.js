@@ -34,7 +34,6 @@ const DEFAULT_WIDTH = 640;
 const DEFAULT_HEIGHT = 480;
 
 import {h, app} from 'hyperapp';
-import {BasicApplication} from '@osjs/common';
 import {
   Box,
   BoxStyled,
@@ -45,7 +44,7 @@ import {
   ToggleField,
   SelectField,
   Button
-} from '@osjs/gui/index.js';
+} from '@osjs/gui';
 import {createCanvas, createCanvasActions} from './canvas.js';
 import {popupFactory} from './popup.js';
 import {tools} from './tool.js';
@@ -94,7 +93,7 @@ const createApplication = (core, proc, win, $content) => {
     }
   });
 
-  const basic = new BasicApplication(core, proc, win, {
+  const basic = core.make('osjs/basic-application', proc, win, {
     defaultFilename: 'New Image.png'
   });
 
