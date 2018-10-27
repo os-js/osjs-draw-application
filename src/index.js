@@ -45,7 +45,7 @@ import {
   ToggleField,
   SelectField,
   Button
-} from '@osjs/gui';
+} from '@osjs/gui/index.js';
 import {createCanvas, createCanvasActions} from './canvas.js';
 import {popupFactory} from './popup.js';
 import {tools} from './tool.js';
