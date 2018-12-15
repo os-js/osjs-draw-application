@@ -39,12 +39,12 @@ const rgbToHex = (r, g, b) => '#' + [
  */
 export const tools = {
   pointer: {
-    label: 'Cursor',
+    label: 'LBL_CURSOR',
     icon: require('./icons/stock-cursor-16.png')
   },
 
   picker: {
-    label: 'Picker',
+    label: 'LBL_PICKER',
     icon: require('./icons/stock-color-pick-from-screen-16.png'),
 
     mousedown: ({a, ev, start, context, width, height}) => {
@@ -69,7 +69,7 @@ export const tools = {
   },
 
   fill: {
-    label: 'Fill',
+    label: 'LBL_FILL',
     icon: require('./icons/stock-tool-bucket-fill-16.png'),
 
     mousedown: ({ev, context, tool, width, height}) => {
@@ -80,7 +80,7 @@ export const tools = {
   },
 
   path: {
-    label: 'Path',
+    label: 'LBL_PATH',
     icon: require('./icons/stock-tool-path-16.png'),
 
     mousedown: ({tool, tempContext}) => {
@@ -99,7 +99,7 @@ export const tools = {
   },
 
   pencil: {
-    label: 'Pencil',
+    label: 'LBL_PENCIL',
     icon: require('./icons/stock-tool-pencil-16.png'),
 
     mousedown: ({tool, tempContext}) => {
@@ -117,7 +117,7 @@ export const tools = {
   },
 
   rect: {
-    label: 'Rectangle',
+    label: 'LBL_RECTANGLE',
     icon: require('./icons/stock-shape-rectangle-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
@@ -130,7 +130,7 @@ export const tools = {
   },
 
   square: {
-    label: 'Square',
+    label: 'LBL_SQUARE',
     icon: require('./icons/stock-shape-square-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
@@ -147,7 +147,7 @@ export const tools = {
   },
 
   oval: {
-    label: 'Oval',
+    label: 'LBL_OVAL',
     icon: require('./icons/stock-shape-ellipse-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
@@ -174,7 +174,7 @@ export const tools = {
   },
 
   circle: {
-    label: 'Circle',
+    label: 'LBL_CIRCLE',
     icon: require('./icons/stock-shape-circle-16.png'),
 
     mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
