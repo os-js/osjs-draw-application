@@ -27,3 +27,18 @@ export const nb_NO = {
   LBL_STROKE: 'Strøk',
   LBL_PATH: 'Sti'
 };
+
+export const vi_VN = {
+  LBL_RESIZE_SCALED: 'Thay đổi kích thước',
+  LBL_RESIZE_CANVAS: 'Thay đổi kích thước Canvas',
+  LBL_CURSOR: 'Con trỏ',
+  LBL_PICKER: 'Chọn màu',
+  LBL_FILL: 'Tô màu',
+  LBL_PENCIL: 'Bút chì',
+  LBL_RECTANGLE: 'Hình chữ nhật',
+  LBL_SQUARE: 'Hình vuông',
+  LBL_OVAL: 'Hình trái xoan',
+  LBL_CIRCLE: 'Hình tròn',
+  LBL_STROKE: 'Độ nét',
+  LBL_PATH: 'Đường kẻ'
+};
