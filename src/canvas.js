@@ -102,6 +102,7 @@ export const createCanvasActions = ({
     tempContext.strokeStyle = tool.background;
     tempContext.lineWidth = tool.lineWidth;
 
+    // eslint-disable-line no-multi-assign
     prev = start = {
       x: ev.clientX - canvasPosition.left,
       y: ev.clientY - canvasPosition.top
