@@ -295,6 +295,7 @@ OSjs.make('osjs/packages').register('Draw', (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
 
   proc.createWindow({
+    id: 'Draw',
     title: metadata.title.en_EN,
     icon: proc.resource(metadata.icon),
     dimension: {
