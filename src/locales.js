@@ -42,3 +42,18 @@ export const vi_VN = {
   LBL_STROKE: 'Độ nét',
   LBL_PATH: 'Đường kẻ'
 };
+
+export const pt_BR = {
+  LBL_RESIZE_SCALED: 'Redimensionar escala',
+  LBL_RESIZE_CANVAS: 'Redimensionar tela de pintura',
+  LBL_CURSOR: 'Cursor',
+  LBL_PICKER: 'Selecionador de cores',
+  LBL_FILL: 'Preencher com cor',
+  LBL_PENCIL: 'Lápis',
+  LBL_RECTANGLE: 'Retângulo',
+  LBL_SQUARE: 'Quadrado',
+  LBL_OVAL: 'Oval',
+  LBL_CIRCLE: 'Circulo',
+  LBL_STROKE: 'Contorno',
+  LBL_PATH: 'Linha'
+};
