@@ -31,13 +31,15 @@
 .Window_Draw .draw-area {
   background: url('./checkerboard.png');
   position: absolute;
-  border: 1px dotted #0000ff;
+  border: 1px dotted #00f;
   box-sizing: border-box;
   font-size: 0;
 }
 
+/*
 .Window_Draw .render-canvas {
 }
+*/
 
 .Window_Draw .draw-tools {
   & > .osjs-gui-button > button {

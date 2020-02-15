@@ -29,6 +29,7 @@
  */
 
 import './index.scss';
+import osjs from 'osjs';
 import * as translations from './locales.js';
 
 const DEFAULT_WIDTH = 640;
@@ -291,7 +292,7 @@ const createApplication = (core, proc, win, $content) => {
 /*
  * Register package
  */
-OSjs.make('osjs/packages').register('Draw', (core, args, options, metadata) => {
+osjs.make('osjs/packages').register('Draw', (core, args, options, metadata) => {
   const proc = core.make('osjs/application', {args, options, metadata});
 
   proc.createWindow({

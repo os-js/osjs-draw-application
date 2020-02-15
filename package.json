@@ -3,11 +3,12 @@
   "version": "1.2.5",
   "description": "OS.js v3 Draw Application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint *.js",
+    "test": "npm run eslint && npm run stylelint",
+    "stylelint": "stylelint src/*.scss",
+    "eslint": "eslint src/*.js",
     "build": "webpack",
     "watch": "webpack --watch",
-    "prepublishOnly": "npm run eslint && rm ./dist/* && NODE_ENV=production npm run build"
+    "prepublishOnly": "npm run test && rm ./dist/* && NODE_ENV=production npm run build"
   },
   "files": [
     "dist/",
@@ -34,6 +35,7 @@
     "@babel/runtime": "^7.8.4",
     "@osjs/eslint-config": "^1.0.2",
     "@osjs/gui": "^4.0.29",
+    "@osjs/stylelint-config": "^1.0.1",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
@@ -45,8 +47,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.2.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.14.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
@@ -63,10 +63,15 @@
     },
     "extends": "@osjs/eslint-config"
   },
+  "stylelint": {
+    "extends": "@osjs/stylelint-config"
+  },
   "babel": {
     "presets": [
-      ["@babel/preset-env", {
-      }]
+      [
+        "@babel/preset-env",
+        {}
+      ]
     ],
     "plugins": [
       "@babel/plugin-transform-runtime"
