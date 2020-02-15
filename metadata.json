@@ -5,12 +5,14 @@
   "title": {
     "en_EN": "Draw",
     "nb_NO": "Tegne",
-    "fr_FR": "Dessiner"
+    "fr_FR": "Dessiner",
+    "pt_BR": "Draw"
   },
   "description": {
     "en_EN": "Draw",
     "nb_NO": "Tegne og bildemanipulasjon",
-    "fr_FR": "Dessiner"
+    "fr_FR": "Dessiner",
+    "pt_BR": "Aplicação para desenhar"
   },
   "mimes": [
     "image/jpeg",
