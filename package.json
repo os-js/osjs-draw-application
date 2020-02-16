@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/os-js/osjs-draw-application#readme",
   "dependencies": {
-    "@osjs/gui": "^4.0.29",
+    "@osjs/gui": "^4.0.30",
     "hyperapp": "^1.2.10"
   },
   "devDependencies": {
