@@ -57,3 +57,18 @@ export const pt_BR = {
   LBL_STROKE: 'Contorno',
   LBL_PATH: 'Linha'
 };
+
+export const fr_FR = {
+  LBL_RESIZE_SCALED: 'Redimensionner proportionnellement',
+  LBL_RESIZE_CANVAS: 'Redimensionner le cavenas',
+  LBL_CURSOR: 'Curseur',
+  LBL_PICKER: 'Sélectionner la couleur',
+  LBL_FILL: 'Remplir',
+  LBL_PENCIL: 'Crayon',
+  LBL_RECTANGLE: 'Rectangle',
+  LBL_SQUARE: 'Carré',
+  LBL_OVAL: 'Ovale',
+  LBL_CIRCLE: 'Circle',
+  LBL_STROKE: 'Contour',
+  LBL_PATH: 'Ligne'
+};
