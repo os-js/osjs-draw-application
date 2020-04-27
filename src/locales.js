@@ -59,15 +59,15 @@ export const pt_BR = {
 };
 
 export const fr_FR = {
-  LBL_RESIZE_SCALED: 'Redimensionner proportionnellement',
-  LBL_RESIZE_CANVAS: 'Redimensionner le cavenas',
+  LBL_RESIZE_SCALED: 'Redimensionner l\'image',
+  LBL_RESIZE_CANVAS: 'Redimensionner le calque',
   LBL_CURSOR: 'Curseur',
   LBL_PICKER: 'Sélectionner la couleur',
   LBL_FILL: 'Remplir',
   LBL_PENCIL: 'Crayon',
   LBL_RECTANGLE: 'Rectangle',
   LBL_SQUARE: 'Carré',
-  LBL_OVAL: 'Ovale',
+  LBL_OVAL: 'Ellipse',
   LBL_CIRCLE: 'Circle',
   LBL_STROKE: 'Contour',
   LBL_PATH: 'Ligne'
