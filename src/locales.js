@@ -68,7 +68,7 @@ export const fr_FR = {
   LBL_RECTANGLE: 'Rectangle',
   LBL_SQUARE: 'Carré',
   LBL_OVAL: 'Ellipse',
-  LBL_CIRCLE: 'Circle',
+  LBL_CIRCLE: 'Cercle',
   LBL_STROKE: 'Contour',
   LBL_PATH: 'Ligne'
 };
