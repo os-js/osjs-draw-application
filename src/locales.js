@@ -72,3 +72,18 @@ export const fr_FR = {
   LBL_STROKE: 'Contour',
   LBL_PATH: 'Ligne'
 };
+
+export const tr_TR = {
+  LBL_RESIZE_SCALED: 'Ölçeği Yeniden Boyutlandır',
+  LBL_RESIZE_CANVAS: 'Tuvali Yeniden Boyutlandır',
+  LBL_CURSOR: 'İmleç',
+  LBL_PICKER: 'Renk Seçim Aracı',
+  LBL_FILL: 'Doldur',
+  LBL_PENCIL: 'Kalem',
+  LBL_RECTANGLE: 'Dörtgen',
+  LBL_SQUARE: 'Kare',
+  LBL_OVAL: 'Oval',
+  LBL_CIRCLE: 'Daire',
+  LBL_STROKE: 'Kalınlık',
+  LBL_PATH: 'Yol'
+};
