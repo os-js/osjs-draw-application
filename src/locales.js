@@ -13,6 +13,21 @@ export const en_EN = {
   LBL_PATH: 'Path'
 };
 
+export const sv_SE = {
+  LBL_RESIZE_SCALED: 'Ändra storlek skalad',
+  LBL_RESIZE_CANVAS: 'Ändra storlek på Canvas',
+  LBL_CURSOR: 'Markör',
+  LBL_PICKER: 'Plockare',
+  LBL_FILL: 'Fylla',
+  LBL_PENCIL: 'Penna',
+  LBL_RECTANGLE: 'Rektangel',
+  LBL_SQUARE: 'Fyrkant',
+  LBL_OVAL: 'Oval',
+  LBL_CIRCLE: 'Cirkel',
+  LBL_STROKE: 'Stroke',
+  LBL_PATH: 'Väg'
+};
+
 export const nb_NO = {
   LBL_RESIZE_SCALED: 'Endre størrelse',
   LBL_RESIZE_CANVAS: 'Endre lerret-størrelse',
