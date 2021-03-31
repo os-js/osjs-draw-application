@@ -4,12 +4,14 @@
   "icon": "icon.png",
   "title": {
     "en_EN": "Draw",
+    "sv_SE": "Rita",
     "nb_NO": "Tegne",
     "fr_FR": "Dessiner",
     "pt_BR": "Draw"
   },
   "description": {
     "en_EN": "Draw",
+    "sv_SE": "Rita",
     "nb_NO": "Tegne og bildemanipulasjon",
     "fr_FR": "Dessiner",
     "pt_BR": "Aplicação para desenhar"
