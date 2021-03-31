@@ -1,6 +1,6 @@
 {
   "name": "@osjs/draw-application",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "OS.js v3 Draw Application",
   "scripts": {
     "test": "npm run eslint && npm run stylelint",
