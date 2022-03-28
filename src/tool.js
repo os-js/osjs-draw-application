@@ -44,7 +44,7 @@ const rgbToHex = (r, g, b) => '#' + [
   parseInt(b, 10).toString(16)
 ].map(val => String(val).padStart(2, '0')).join('');
 
-/*
+/**
  * The list of tools
  */
 export const tools = {

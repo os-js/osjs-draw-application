@@ -51,7 +51,7 @@ import {createCanvas, createCanvasActions} from './canvas.js';
 import {popupFactory} from './popup.js';
 import {tools} from './tool.js';
 
-/*
+/**
  * Creates the toolbar buttons
  */
 const createToolButtons = (current, actions, proc, __) => Object.keys(tools)
@@ -62,7 +62,7 @@ const createToolButtons = (current, actions, proc, __) => Object.keys(tools)
     onclick: () => actions.buttonTool(name)
   }));
 
-/*
+/**
  * Creates file menu items
  */
 const createFileMenu = (current, actions, _) => ([
@@ -73,7 +73,7 @@ const createFileMenu = (current, actions, _) => ([
   {label: _('LBL_QUIT'), onclick: () => actions.menuQuit()}
 ]);
 
-/*
+/**
  * Creates the image menu items
  */
 const createImageMenu = (actions, __) => ([
@@ -81,7 +81,7 @@ const createImageMenu = (actions, __) => ([
   {label: __('LBL_RESIZE_CANVAS'), onclick: () => actions.menuResizeCanvas()}
 ]);
 
-/*
+/**
  * Creates the application
  */
 const createApplication = (core, proc, win, $content) => {
