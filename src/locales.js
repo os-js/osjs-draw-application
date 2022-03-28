@@ -5,10 +5,12 @@ export const en_EN = {
   LBL_PICKER: 'Picker',
   LBL_FILL: 'Fill',
   LBL_PENCIL: 'Pencil',
+  LBL_TEXT: 'Text',
   LBL_RECTANGLE: 'Rectangle',
   LBL_SQUARE: 'Square',
   LBL_OVAL: 'Oval',
   LBL_CIRCLE: 'Circle',
+  LBL_SET_FONT: 'Set Font',
   LBL_STROKE: 'Stroke',
   LBL_PATH: 'Path'
 };
@@ -20,10 +22,12 @@ export const sv_SE = {
   LBL_PICKER: 'Plockare',
   LBL_FILL: 'Fylla',
   LBL_PENCIL: 'Penna',
+  LBL_TEXT: 'Text',
   LBL_RECTANGLE: 'Rektangel',
   LBL_SQUARE: 'Fyrkant',
   LBL_OVAL: 'Oval',
   LBL_CIRCLE: 'Cirkel',
+  LBL_SET_FONT: 'Ställ in teckensnitt',
   LBL_STROKE: 'Stroke',
   LBL_PATH: 'Väg'
 };
@@ -35,10 +39,12 @@ export const nb_NO = {
   LBL_PICKER: 'Fargevalg',
   LBL_FILL: 'Fyll',
   LBL_PENCIL: 'Blyant',
+  LBL_TEXT: 'Tekst',
   LBL_RECTANGLE: 'Rektangel',
   LBL_SQUARE: 'Firkant',
   LBL_OVAL: 'Oval',
   LBL_CIRCLE: 'Sirkel',
+  LBL_SET_FONT: 'Angi skrifttype',
   LBL_STROKE: 'Strøk',
   LBL_PATH: 'Sti'
 };
@@ -50,10 +56,12 @@ export const vi_VN = {
   LBL_PICKER: 'Chọn màu',
   LBL_FILL: 'Tô màu',
   LBL_PENCIL: 'Bút chì',
+  LBL_TEXT: 'Văn bản',
   LBL_RECTANGLE: 'Hình chữ nhật',
   LBL_SQUARE: 'Hình vuông',
   LBL_OVAL: 'Hình trái xoan',
   LBL_CIRCLE: 'Hình tròn',
+  LBL_SET_FONT: 'Thiết lập phông chữ',
   LBL_STROKE: 'Độ nét',
   LBL_PATH: 'Đường kẻ'
 };
@@ -65,10 +73,12 @@ export const pt_BR = {
   LBL_PICKER: 'Selecionador de cores',
   LBL_FILL: 'Preencher com cor',
   LBL_PENCIL: 'Lápis',
+  LBL_TEXT: 'Texto',
   LBL_RECTANGLE: 'Retângulo',
   LBL_SQUARE: 'Quadrado',
   LBL_OVAL: 'Oval',
   LBL_CIRCLE: 'Circulo',
+  LBL_SET_FONT: 'Definir fonte',
   LBL_STROKE: 'Contorno',
   LBL_PATH: 'Linha'
 };
@@ -80,10 +90,12 @@ export const fr_FR = {
   LBL_PICKER: 'Sélectionner la couleur',
   LBL_FILL: 'Remplir',
   LBL_PENCIL: 'Crayon',
+  LBL_TEXT: 'Texte',
   LBL_RECTANGLE: 'Rectangle',
   LBL_SQUARE: 'Carré',
   LBL_OVAL: 'Ellipse',
   LBL_CIRCLE: 'Cercle',
+  LBL_SET_FONT: 'Définir la police',
   LBL_STROKE: 'Contour',
   LBL_PATH: 'Ligne'
 };
@@ -95,10 +107,12 @@ export const tr_TR = {
   LBL_PICKER: 'Renk Seçim Aracı',
   LBL_FILL: 'Doldur',
   LBL_PENCIL: 'Kalem',
+  LBL_TEXT: 'Metin',
   LBL_RECTANGLE: 'Dörtgen',
   LBL_SQUARE: 'Kare',
   LBL_OVAL: 'Oval',
   LBL_CIRCLE: 'Daire',
+  LBL_SET_FONT: 'Yazı Tipini Ayarla',
   LBL_STROKE: 'Kalınlık',
   LBL_PATH: 'Yol'
 };

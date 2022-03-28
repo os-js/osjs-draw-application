@@ -33,6 +33,7 @@ import iconPicker from './icons/stock-color-pick-from-screen-16.png';
 import iconFile from './icons/stock-tool-bucket-fill-16.png';
 import iconPath from './icons/stock-tool-path-16.png';
 import iconPencil from './icons/stock-tool-pencil-16.png';
+import iconText from './icons/stock-tool-text-16.png';
 import iconRectangle from './icons/stock-shape-rectangle-16.png';
 import iconSquare from './icons/stock-shape-square-16.png';
 import iconOval from './icons/stock-shape-ellipse-16.png';
@@ -123,6 +124,23 @@ export const tools = {
       tempContext.lineTo(current.x, current.y);
       tempContext.stroke();
       tempContext.closePath();
+    }
+  },
+
+  text: {
+    label: 'LBL_TEXT',
+    icon: iconText,
+
+    // TODO: Open text input somehow, either here or from `index.js`
+    mousedown: ({tool, tempContext}) => {
+      tempContext.strokeStyle = tool.foreground;
+    },
+
+    mousemove: ({tool, tempContext, current, diff, start, width, height}) => {
+      tempContext.font = `${tool.font.size}px ${tool.font.name}`;
+
+      // TODO: Implement a way to get text from the user
+      tempContext.fillText(tool.text, start.x, start.y);
     }
   },
 
