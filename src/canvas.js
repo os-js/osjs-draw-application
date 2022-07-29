@@ -30,7 +30,7 @@
 
 import {tools} from './tool.js';
 
-/*
+/**
  * Creates a new canvas with context
  */
 export const createCanvas = (width, height, className) => {
@@ -45,7 +45,7 @@ export const createCanvas = (width, height, className) => {
   ];
 };
 
-/*
+/**
  * Binds and resolves events to canvas actions
  */
 export const createCanvasActions = ({

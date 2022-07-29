@@ -51,7 +51,7 @@ import {createCanvas, createCanvasActions} from './canvas.js';
 import {popupFactory} from './popup.js';
 import {tools} from './tool.js';
 
-/*
+/**
  * Creates the toolbar buttons
  */
 const createToolButtons = (current, actions, proc, __) => Object.keys(tools)
@@ -62,7 +62,7 @@ const createToolButtons = (current, actions, proc, __) => Object.keys(tools)
     onclick: () => actions.buttonTool(name)
   }));
 
-/*
+/**
  * Creates file menu items
  */
 const createFileMenu = (current, actions, _) => ([
@@ -73,7 +73,7 @@ const createFileMenu = (current, actions, _) => ([
   {label: _('LBL_QUIT'), onclick: () => actions.menuQuit()}
 ]);
 
-/*
+/**
  * Creates the image menu items
  */
 const createImageMenu = (actions, __) => ([
@@ -81,7 +81,7 @@ const createImageMenu = (actions, __) => ([
   {label: __('LBL_RESIZE_CANVAS'), onclick: () => actions.menuResizeCanvas()}
 ]);
 
-/*
+/**
  * Creates the application
  */
 const createApplication = (core, proc, win, $content) => {
@@ -94,6 +94,16 @@ const createApplication = (core, proc, win, $content) => {
   }, (btn, value) => {
     if (btn === 'ok') {
       cb(value.hex);
+    }
+  });
+
+  const fontDialog = (font, cb) => core.make('osjs/dialog', 'font', {
+    name: font.name,
+    size: font.size,
+    style: font.style
+  }, (btn, value) => {
+    if (btn === "ok") {
+      cb(value);
     }
   });
 
@@ -121,6 +131,10 @@ const createApplication = (core, proc, win, $content) => {
           orientation: 'horizontal'
         }, [
           ...createToolButtons(state.tool, actions, proc, __),
+          h(Button, {
+            label: __('LBL_SET_FONT'),
+            onclick: () => actions.buttonFont()
+          }),
           h(Button, {}, [
             h('div', {
               style: {height: '1em', backgroundColor: state.tool.foreground},
@@ -200,6 +214,11 @@ const createApplication = (core, proc, win, $content) => {
     },
     tool: {
       name: 'pointer',
+      font: {
+        name: 'arial',
+        size: 10,
+        style: 'regular',
+      },
       foreground: '#000000',
       background: '#ffffff',
       stroke: false,
@@ -222,6 +241,10 @@ const createApplication = (core, proc, win, $content) => {
     menuResizeCanvas: () => (state, actions) => popup('resize', actions, ({width, height}) => {
       resizeCanvasSize({width, height});
       actions.setSize({width, height});
+    }),
+
+    buttonFont: () => (state, actions) => fontDialog(state.tool.font, font => {
+      actions.setFont(font);
     }),
 
     buttonForeground: () => (state, actions) => colorDialog(state.tool.foreground, color => {
@@ -263,6 +286,7 @@ const createApplication = (core, proc, win, $content) => {
 
     setSize: size => state => ({image: size}),
     setTool: name => state => ({tool: Object.assign({}, state.tool, {name})}),
+    setFont: font => state => ({tool: Object.assign({}, state.tool, {font})}),
     setForeground: foreground => state => ({tool: Object.assign({}, state.tool, {foreground})}),
     setBackground: background => state => ({tool: Object.assign({}, state.tool, {background})}),
     setStroke: stroke => state => ({tool: Object.assign({}, state.tool, {stroke})}),
